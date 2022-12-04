@@ -1,0 +1,13 @@
+.vscode
+.DS_Store
+
+# latex compile metadata
+*.aux
+*.bcf
+*_latexmk
+*.fls
+*.log
+*.run.xml
+*.xdv
+
+*.pdf
