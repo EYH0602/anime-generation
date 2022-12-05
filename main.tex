@@ -20,7 +20,10 @@
 \usepackage{rotating}
 
 % reference
-% \usepackage[style=authoryear, sorting=none]{biblatex}
+% !BIB TS-program = biber
+% !BIB program = biber
+\usepackage[style=authoryear, sorting=none]{biblatex}
+\addbibresource{src/ref.bib}
 
 %
 %Fancy-header package to modify header/page numbering (insert last name)
@@ -74,9 +77,9 @@ Image Generation Models and Their Impact on Japanese Anime Industry
 \input{src/background.tex}
 \input{src/analysis_industry.tex}
 \input{src/conclusion.tex}
-\input{src/reference.tex}
 
-
+\newpage
+\printbibheading[heading=subbibliography]
 
 \end{flushleft}
 \end{document}

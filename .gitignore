@@ -10,4 +10,8 @@
 *.run.xml
 *.xdv
 
+# biblatex
+*.bbl
+*.blg
+
 *.pdf
