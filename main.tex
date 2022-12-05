@@ -14,6 +14,8 @@
 \usepackage{setspace}
 \doublespacing
 
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
 %
 %Rotating tables (e.g. sideways when too long)
 %
@@ -22,7 +24,7 @@
 % reference
 % !BIB TS-program = biber
 % !BIB program = biber
-\usepackage[style=authoryear, sorting=none]{biblatex}
+\usepackage[style=numeric, sorting=none]{biblatex}
 \addbibresource{src/ref.bib}
 
 %
@@ -42,35 +44,19 @@
 %12pt is one-sixth of an inch. Subtract this from 0.5in to get headsep value
 \setlength\headsep{0.333in}
 
-%
-%Works cited environment
-%(to start, use \begin{workscited...}, each entry preceded by \bibent)
-% - from Ryan Alcock's MLA style file
-%
-\newcommand{\bibent}{\noindent \hangindent 40pt}
-\newenvironment{workscited}{\newpage \begin{center} Works Cited \end{center}}{\newpage }
-
-
-%
+%%%%Title
 %Begin document
 %
 \begin{document}
+
 \begin{flushleft}
 
+
+{\Large\bf Image Generation Models and Their Impact on Japanese Anime Industry} \\
 %%%%First page name, class, etc
-Ethan He\\
-Katherine Mezur \\
-JPN 109\\
-December 4 2022\\
+Ethan He \\
 
-
-%%%%Title
-\begin{center}
-Image Generation Models and Their Impact on Japanese Anime Industry
-\end{center}
-
-
-%%%%Changes paragraph indentation to 0.5in
+\setlength{\parindent}{0.5in}
 %%%%Begin body of paper here
 \input{src/abstract.tex}
 \input{src/intro.tex}
@@ -79,7 +65,7 @@ Image Generation Models and Their Impact on Japanese Anime Industry
 \input{src/conclusion.tex}
 
 \newpage
-\printbibheading[heading=subbibliography]
+\printbibliography[heading=subbibliography]
 
 \end{flushleft}
 \end{document}
