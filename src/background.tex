@@ -48,3 +48,39 @@ This difference allows JoJoGAN to generate multiple images of multiple much easi
 \end{figure}
 
 \subsubsection*{Diffusion Models}
+
+Rombach et. al newly proposed Latent Diffusion Models as the state-of-art image generation algorithm \cite{Rombach2022High}.
+The idea of diffusion is to learn a image style by denoising the training image to learn the data distribution in the image.
+That is, gradually break down a image into noises.
+Then for generation, they use the inverse map of diffusion to resample on noise under known distribution
+
+$$
+L_{L D M}:=\mathbb{E}_{\mathcal{E}(x), \epsilon \sim \mathcal{N}(0,1), t}\left[\left\|\epsilon-\epsilon_\theta\left(z_t, t\right)\right\|_2^2\right]
+$$
+
+As StyleGAN models specialized on image-to-image generation,
+LDMs shows surprising results on text-to-image generation as shown in Figure 3.
+\begin{figure}[]
+    \includegraphics[width=\textwidth]{img/LDM-1.png}
+    \caption{
+        Latent Diffusion Models:
+        user input text are on the top
+        and the generated images are under the text descriptions \cite{Rombach2022High}.
+    }
+\end{figure}
+
+When we apply LDM to anime characters,
+we can easily generate any character as we want with proper text description as in Figure 4.
+As shown in the image grid,
+text-to-image generated images are like brand new characters,
+i.e. there is hard to find the exact same style character in existing anime as in StyleGAN generated images.
+\begin{figure}[h]
+    \begin{center}
+    \includegraphics[width=0.78\textwidth]{img/waifu_diffusion.png}
+    \end{center}
+    \caption{
+        Waifu Diffusion:
+        user input text are on the top
+        and the generated images are under the text descriptions \cite{WaifuDiffusion}.
+    }
+\end{figure}
